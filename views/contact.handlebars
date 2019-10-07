@@ -1,0 +1,31 @@
+{{!-- Va a recibir los metadatos del main que esta en layout y recibe el scss principal  --}}
+<h1>Página de contacto</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquam provident reprehenderit qui. Cupiditate, eos quis enim quas fuga consequatur esse magnam, deleniti doloremque earum non nisi, tempora iure voluptate.</p>
+
+
+{{!-- Recibe las direcciones de la papgina cmo si estuviera en el htm normal --}}
+<a href="/">Ir al inicio</a>
+
+<div style="border:2px solid red">
+    ¡Mensaje enviado!
+</div>
+
+{{!-- El metodo post se coloca para decirle al js que ejecute el cambio y guarde las variables en el --}}
+{{!-- El metodo por defecto es get pero solo sirve para recibir infromacion de cambios --}}
+
+{{!-- Se coloca la accion para guardar los datos del formulario  --}}
+<form action="/receiveContact"
+ method="POST">
+    <label for="contactname">Nombre:</label>
+    <input type="text" id="contactname" name="name">
+
+    <label for="contactmessage">Mensaje:</label>
+    <textarea id="contactmessage" name="message"></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<img src="/images/gatos.jpg" alt="">
+
+{{!-- Puedo llamar js a cada de una de las paginas si son acciones muy concretas de ellas o sino no llamo ninguno porque igual va a recibir el principal  --}}
+<script src="/scripts/main.js"></script>
